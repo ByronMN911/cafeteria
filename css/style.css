@@ -1,81 +1,138 @@
-/*Aquí van los comentariiosi de css*/
+/*Aquí van los comentarios de css*/
 *{
+    /*Elimina los márgenes hacia fuera*/
     margin: 0;
+
+    /*Elimina los márgenes hacia dentro*/
     padding: 0;
+
+    /*aseguran compatibilidad con navegadores antiguos.”*/
     -webkit-box-sizing: border-box;
     -moz-box-sizing:border-box;
+
+    /*se usa para que el tamaño total de los elementos incluya el padding y el border, facilitando el diseño*/
     box-sizing: border-box;
 
 
 }
 body{
+    /*Se elige el tipo de fuente para el texto dentro del body de la página*/
     font-family: "Open Sans", Arial, San-serif;
+
+    /*se elige el tamaño de la fuente para el texto dentro del body de la página*/
     font-size: 16px;
 }
 
 /**LE DAMOS ESTILO A LA CLASE CONTENEDOR**/
-.contenedor
-{
+.contenedor {
+    /*El contenedor ocupa el 90% del ancho del elemento padre */
     width: 90%;
 
+    /*El ancho máximo del contenedor será de 1000px */
     max-width: 1000px;
+
+    /*Centra el contenedor horizontalmente al aplicar márgenes automáticos */
     margin: auto;
+
+    /*Oculta cualquier contenido que se desborde del contenedor */
     overflow: hidden;
 }
 /* ----- ----- HEADER ----- ----- */
 
 header{
+    /*Se indica que ocupará el 100% del ancho de la página web */
     width: 100%;
+
+    /*Se establece una imagen de fondo y un color de respaldo para la cabecera de la página */
     background: url('../img/bg.jpeg') #281a0c;
-    background-size:cover;
+
+    /*Hace que la imagen de fondo cubra todo el área del elemento sin distorsionarse */
+    background-size: cover;
+
+    /*Fija la imagen de fondo para que no se desplace al hacer scroll */
     background-attachment: fixed;
+
+    /*Centra la imagen de fondo horizontalmente y la alinea en la parte superior verticalmente */
     background-position: center 0;
 }
 
 header .contenedor {
+    
+    /* Establece una posición relativa para que sus contenedores con posicion absoluta se ubiquen en relación a este elemento */
     position: relative;
+
+    /* Define una altura fija de 700 píxeles para el elemento */
     height: 700px;
 }
 
 header .menu {
+    /*El contenedor .menu ocupará el 100% del ancho del elemento header*/
     width: 100%;
+
+    /*se alinea el texto a la derecha*/
     text-align: right;
 }
 
 header .menu a {
+    /*Le da color a nuestra fuente menu*/
     color: #fff;
+
+    /*Le da tamaño a nuestra fuente*/
     font-size: 20px;
+
+    /*Le da anchura a nuestra fuente*/
     font-weight: 300;
+
+    /*convierte las etiquetas de tipo de section a tipo bloque */
     display: inline-block;
+
+    /*le da margen a las etiquetas*/
     margin: 40px 20px;
+
+    /*elimina la linea decorativa(barra baja)*/
     text-decoration:none;
+
+    /* Establece una posición relativa para que sus contenedores con posicion absoluta se ubiquen en relación a este elemento */
     position: relative;
 }
-
+/*se crea una pseudoclase*/
 header .menu a:hover {
+    /* establece una linea debajo del texto que aparece al colocar el mouse en el texto*/
     text-decoration: underline;
+    color:#8d8d8d;
 }
 
 header .texto {
+    /*el ancho del contenedor .texto ocupara el 100% del header*/
     width: 100%;
+    /*se establece un color blanco*/
     color: #fff;
+    /*fija el texto*/
     position: absolute;
+    /*posiciona el texto al 50% del contenedor header*/
     top:50%;
+    /*sube un poco el texto*/
     margin-top:-52px;
 }
 
 header .texto .nombre {
+    /*le da tamaño al texto*/
     font-size: 50px;
+    /*le da anchura al texto*/
     font-weight: 600;
 }
 
 header .texto .nombre span {
+    /*le da anchura al texto*/
     font-weight:  300;
 }
 
 header .texto h3 {
+    /*le da anchura al texto*/
     font-weight: 300;
+    /*le da tamaño al texto*/
     font-size: 25px;
+    /*le da estilo cursiva al texto*/
     font-style: italic;
 }
 
@@ -126,3 +183,107 @@ header .texto h3 {
     line-height: 28px;
     margin-bottom: 15px;
 }
+
+.main .menu{
+    padding-top: 570px;
+    margin-bottom: 50px;
+}
+
+.main .menu .titulo{
+    font-size: 40px;
+    font-weight: 300;
+    text-align:center;
+    margin-bottom: 40px;
+}
+
+.main .menu .contenedor-menu,
+.main .menu .contenedor-menu2 {
+    border: 1px solid #000;
+    background: transparent;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.main .menu article {
+    width: 50%;
+    float: left;
+    padding: 20px;
+}
+
+.main .menu .categoria {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.main .menu .platillo {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom:4px dotted #000;
+    overflow:hidden;
+}
+
+.main .menu .nombre {
+    font-size: 20px;
+    margin-bottom: 15px;
+    float: left;
+}
+
+.main .menu .precio {
+    font-size: 20px;
+    margin-bottom:15px;
+    float: right;
+}
+
+.main .menu .descripcion {
+    font-size: 16px;
+    color:#676767;
+    clear: both;
+}
+
+.main .galeria {
+    overflow:hidden;
+}
+
+.main .galeria .foto {
+    width: 25%;
+    float:left;
+}
+
+.main .galeria .foto img {
+    width: 100%;
+    vertical-align: top;
+    opacity: .7;
+}
+
+.main .galeria .foto img:hover {
+    opacity: 1;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition:all .3s ease;
+}
+
+.main .ubicacion  {
+    background: #fff;
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.main .ubicacion .titulo{
+    text-align: center;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight:300;
+    margin-bottom: 40px;
+}
+
+.main .ubicacion .direccion {
+    float:left;
+    width: 50%;
+    text-align:left;
+}
+
+
+
+
