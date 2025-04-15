@@ -1,332 +1,527 @@
-/*Aquí van los comentarios de css*/
-*{
-    /*Elimina los márgenes hacia fuera*/
+/*Aqui va a ir los estilos css para el index.html*/
+* {
+    /*Elimina el margen por defecto de todos los elementos HTML*/
     margin: 0;
-
-    /*Elimina los márgenes hacia dentro*/
+    /*Elimina el padding por defecto de todos los elementos HTML*/
     padding: 0;
-
-    /*aseguran compatibilidad con navegadores antiguos.”*/
+    /*Definimos el modelo de cajas para navegadores basados en webkit
+    googleChrome, internet explorer, edge*/
     -webkit-box-sizing: border-box;
-    -moz-box-sizing:border-box;
-
-    /*se usa para que el tamaño total de los elementos incluya el padding y el border, facilitando el diseño*/
+    /*Definimos el modelo de cajas para navegadores basados en mozilla
+    firefox, opera*/
+    -moz-box-sizing: border-box;
+    /*Definimos el modelo de cajas para navegadores basados en el estandar*/
     box-sizing: border-box;
-
-
 }
-body{
-    /*Se elige el tipo de fuente para el texto dentro del body de la página*/
-    font-family: "Open Sans", Arial, San-serif;
 
-    /*se elige el tamaño de la fuente para el texto dentro del body de la página*/
+/*Definimos los estilos para el body*/
+body {
+    font-family: "Open Sans", Arial, Sans-serif;
     font-size: 16px;
 }
 
-/**LE DAMOS ESTILO A LA CLASE CONTENEDOR**/
+/*Trabajamos en los estilos de la clase contenedor*/
 .contenedor {
-    /*El contenedor ocupa el 90% del ancho del elemento padre */
+    /*Definir el ancho del contenedor*/
     width: 90%;
-
-    /*El ancho máximo del contenedor será de 1000px */
+    /*Definimos el color de fondo del contenedor
+    background-color: aqua;*/
+    /*Definimos la anchura maxima del contenedor*/
     max-width: 1000px;
-
-    /*Centra el contenedor horizontalmente al aplicar márgenes automáticos */
+    /*Definimos el margen en automatico para centrar el contenedor*/
     margin: auto;
-
-    /*Oculta cualquier contenido que se desborde del contenedor */
+    /*Ocultamos el desbordamiento del contendor*/
     overflow: hidden;
 }
-/* ----- ----- HEADER ----- ----- */
 
-header{
-    /*Se indica que ocupará el 100% del ancho de la página web */
+/*Le damos estilos al header*/
+header {
+    /*Definimos el tamaño del header a un 100%*/
     width: 100%;
-
-    /*Se establece una imagen de fondo y un color de respaldo para la cabecera de la página */
-    background: url('../img/bg.jpeg') #281a0c;
-
-    /*Hace que la imagen de fondo cubra todo el área del elemento sin distorsionarse */
+    background: url('../img/bg.jpg') #281a0c;
     background-size: cover;
-
-    /*Fija la imagen de fondo para que no se desplace al hacer scroll */
     background-attachment: fixed;
-
-    /*Centra la imagen de fondo horizontalmente y la alinea en la parte superior verticalmente */
     background-position: center 0;
+
 }
 
+/*Le damos estilos al header y que busque una clase que se llame contenedor*/
 header .contenedor {
-    
-    /* Establece una posición relativa para que sus contenedores con posicion absoluta se ubiquen en relación a este elemento */
     position: relative;
-
-    /* Define una altura fija de 700 píxeles para el elemento */
     height: 700px;
 }
 
+/*Le damos estilos al menú dentro del header*/
 header .menu {
-    /*El contenedor .menu ocupará el 100% del ancho del elemento header*/
+    /*Le damos el tamaño de la anchura*/
     width: 100%;
-
-    /*se alinea el texto a la derecha*/
+    /*Le decimos que alinee el texto a la derecha*/
     text-align: right;
 }
-
-header .menu a {
-    /*Le da color a nuestra fuente menu*/
+/*Le damos estilos a las eticas del menú*/
+header .menu a{
+    /*Le voy a dar un color a las etiquetas a*/
     color: #fff;
-
-    /*Le da tamaño a nuestra fuente*/
     font-size: 20px;
-
-    /*Le da anchura a nuestra fuente*/
     font-weight: 300;
-
-    /*convierte las etiquetas de tipo de section a tipo bloque */
-    display: inline-block;
-
-    /*le da margen a las etiquetas*/
+    /*display: inline-block;*/
     margin: 40px 20px;
-
-    /*elimina la linea decorativa(barra baja)*/
-    text-decoration:none;
-
-    /* Establece una posición relativa para que sus contenedores con posicion absoluta se ubiquen en relación a este elemento */
+    text-decoration: none;
     position: relative;
-}
-/*se crea una pseudoclase*/
-header .menu a:hover {
-    /* establece una linea debajo del texto que aparece al colocar el mouse en el texto*/
+}   
+/*Utilizamos la seudoclase hover*/
+header .menu a:hover{
+    color: #18a08c;
+    /*Crea una barra inferior en la palabra sobre la que se pone el mouse*/
     text-decoration: underline;
-    color:#8d8d8d;
 }
 
-header .texto {
-    /*el ancho del contenedor .texto ocupara el 100% del header*/
+header .texto{
     width: 100%;
-    /*se establece un color blanco*/
     color: #fff;
-    /*fija el texto*/
     position: absolute;
-    /*posiciona el texto al 50% del contenedor header*/
-    top:50%;
-    /*sube un poco el texto*/
-    margin-top:-52px;
+    top: 50%;
+    margin-top: -52px;
 }
 
-header .texto .nombre {
-    /*le da tamaño al texto*/
+header .texto .nombre{
     font-size: 50px;
-    /*le da anchura al texto*/
     font-weight: 600;
 }
 
-header .texto .nombre span {
-    /*le da anchura al texto*/
-    font-weight:  300;
-}
-
-header .texto h3 {
-    /*le da anchura al texto*/
+header .texto .nombre span{
     font-weight: 300;
-    /*le da tamaño al texto*/
+}
+header .texto h3{
+    font-weight: 300;
     font-size: 25px;
-    /*le da estilo cursiva al texto*/
     font-style: italic;
 }
 
 /* ----- ----- MAIN ----- ----- */
 .main {
-    background: url('../img/textura.jpeg');
+    /*Aplica una imagen de fondo con textura*/
+    background: url('../img/bg-textura.png');
+    /*Hace que la imagen de fondo se repita en toda el área*/
     background-repeat:  repeat;
 }
 
 .main .acerca-de .contenedor {
+    /*Permite que los elementos salgan del contenedor sin recorte*/
     overflow: visible;
+    /*Permite posicionar elementos absolutamente dentro de este contenedor*/
     position: relative;
 }
 
 .main .acerca-de .foto {
+    /*Define que la imagen ocupe el 80% del ancho del contenedor*/
     width: 80%;
+    /*Posiciona la imagen de forma absoluta respecto al contenedor*/
     position: absolute;
+    /*Coloca la imagen en el borde izquierdo*/
     left: 0;
+    /*Desplaza la imagen hacia arriba 50px*/
     top: -50px;
+    /*Coloca la imagen detrás de otros elementos (z-index bajo)*/
     z-index: 0;
+    /*Agrega una sombra alrededor de la imagen*/
     box-shadow: 0px 0px 15px rgba(0,0,0,.35);
 }
 
 .main .acerca-de .foto img {
+    /*Alinea la imagen con la parte superior del contenedor*/
     vertical-align: top;
+    /*Hace que la imagen ocupe todo el ancho del contenedor*/
     width: 100%;
 }
 
 .main .acerca-de article {
+    /*Color de fondo blanco para el artículo*/
     background: #fff;
+    /*Espaciado interno de 40px en todos los lados*/
     padding: 40px;
+    /*Define que el artículo ocupe el 50% del ancho del contenedor*/
     width: 50%;
+    /*Permite posicionar este artículo sobre el anterior*/
     position: relative;
+    /*Desplaza el artículo hacia abajo 500px*/
     top: 500px;
-    
+    /*Coloca el artículo por encima de otros elementos (z-index alto)*/
     z-index: 1;
-    float:right;
+    /*Coloca el artículo a la derecha*/
+    float: right;
+    /*Agrega una sombra al artículo*/
     box-shadow: 0px 0px 15px rgba(0,0,0,.35);
 }
 
 .main .acerca-de article h3 {
+    /*Tamaño de fuente grande para el título*/
     font-size: 50px;
+    /*Peso de fuente delgado*/
     font-weight: 300;
+    /*Margen inferior de 40px*/
     margin-bottom:40px;
 }
 
-.main .acerca-de article p{
+.main .acerca-de article p {
+    /*Altura de línea para mejorar la lectura del texto*/
     line-height: 28px;
+    /*Margen inferior entre párrafos*/
     margin-bottom: 15px;
 }
 
-.main .menu{
+.main .menu {
+    /*Agrega espacio arriba para separar del contenido anterior*/
     padding-top: 570px;
+    /*Agrega margen inferior para espacio entre secciones*/
     margin-bottom: 50px;
 }
 
-.main .menu .titulo{
+.main .menu .titulo {
+    /*Tamaño de fuente del título de la sección menú*/
     font-size: 40px;
+    /*Fuente más delgada*/
     font-weight: 300;
-    text-align:center;
+    /*Centrar el texto*/
+    text-align: center;
+    /*Espacio debajo del título*/
     margin-bottom: 40px;
 }
 
 .main .menu .contenedor-menu,
 .main .menu .contenedor-menu2 {
-    border: 1px solid #000;
-    background: transparent;
+    /*Borde de 2px negro*/
+    border: 2px solid #000;
+    /*Color de fondo con transparencia (rgba)*/
+    background: #739da2c6;
+    /*Espaciado interno de 10px*/
     padding: 10px;
+    /*Oculta el contenido que sobrepase el contenedor*/
     overflow: hidden;
+    /*Sombra en los lados izquierdo y derecho*/
+    box-shadow: 15px 0px 15px 0 rgba(0, 0, 0, 0.5);
 }
 
 .main .menu article {
+    /*El artículo ocupa la mitad del contenedor*/
     width: 50%;
+    /*Coloca los artículos uno junto al otro (izq y der)*/
     float: left;
+    /*Espacio interno de 20px*/
     padding: 20px;
 }
 
 .main .menu .categoria {
+    /*Tamaño de fuente del nombre de la categoría*/
     font-size: 22px;
+    /*Fuente en negrita*/
     font-weight: 700;
+    /*Espacio inferior de 40px*/
     margin-bottom: 40px;
+    /*Texto centrado*/
     text-align: center;
 }
 
 .main .menu .platillo {
+    /*Espacio inferior entre platillos*/
     margin-bottom: 30px;
+    /*Espacio interno inferior de 20px*/
     padding-bottom: 20px;
-    border-bottom:4px dotted #000;
-    overflow:hidden;
+    /*Línea inferior punteada para separar platillos*/
+    border-bottom: 4px dotted #000;
+    /*Oculta desbordamientos*/
+    overflow: hidden;
 }
 
 .main .menu .nombre {
+    /*Tamaño de fuente del nombre del platillo*/
     font-size: 20px;
+    /*Espacio inferior*/
     margin-bottom: 15px;
+    /*Coloca el nombre alineado a la izquierda*/
     float: left;
 }
 
 .main .menu .precio {
+    /*Tamaño de fuente del precio*/
     font-size: 20px;
-    margin-bottom:15px;
+    /*Espacio inferior*/
+    margin-bottom: 15px;
+    /*Coloca el precio alineado a la derecha*/
     float: right;
 }
 
 .main .menu .descripcion {
+    /*Tamaño de fuente de la descripción*/
     font-size: 16px;
-    color:#676767;
+    /*Color gris para la descripción*/
+    color: #676767;
+    /*Hace que el texto inicie en una nueva línea después de flotantes*/
     clear: both;
 }
 
+/*Estilos a la sección galeria*/
+
 .main .galeria {
-    overflow:hidden;
-}
-
-.main .galeria .foto {
-    width: 25%;
-    float:left;
-}
-
-.main .galeria .foto img {
-    width: 100%;
-    vertical-align: top;
-    opacity: .7;
-}
-
-.main .galeria .foto img:hover {
-    opacity: 1;
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition:all .3s ease;
-}
-
-.main .ubicacion  {
-    background: #fff;
-    padding: 60px 0;
+    /*Oculta contenido que sobresalga del contenedor*/
     overflow: hidden;
 }
 
-.main .ubicacion .titulo{
+.main .galeria .foto {
+    /*Cada imagen ocupa el 25% del ancho (4 por fila)*/
+    width: 25%;
+    /*Alinea imágenes horizontalmente*/
+    float: left;
+}
+
+.main .galeria .foto img {
+    /*La imagen ocupa todo el ancho del contenedor*/
+    width: 100%;
+    /*Alinea la imagen con la parte superior*/
+    vertical-align: top;
+    /*La imagen tiene opacidad reducida al inicio*/
+    opacity: 0.7;
+}
+
+.main .galeria .foto img:hover {
+    /*La imagen se vuelve completamente visible al pasar el mouse*/
+    opacity: 1;
+
+    /*Transición suave en navegadores antiguos (webkit)*/
+    -webkit-transition: all 0.3s ease;
+    /*Transición suave para navegadores Opera*/
+    -o-transition: all 0.3s ease;
+    /*Transición suave en general*/
+    transition: all 0.3s ease;
+}
+
+/*-------Ubicación--------*/
+.main .ubicacion {
+    /*Fondo blanco para la sección*/
+    background: #fff;
+    /*Espaciado interno de 60px*/
+    padding: 60px;
+    /*Oculta el contenido desbordado*/
+    overflow: hidden;
+}
+
+.main .ubicacion .titulo {
+    /*Texto centrado*/
     text-align: center;
+    /*Tamaño grande para el título*/
     font-size: 40px;
+    /*Altura de línea igual al tamaño para que no crezca de más*/
     line-height: 40px;
-    font-weight:300;
+    /*Fuente delgada*/
+    font-weight: 300;
+    /*Espacio inferior*/
     margin-bottom: 40px;
 }
 
 .main .ubicacion .direccion {
-    float:left;
+    /*Coloca esta parte a la izquierda*/
+    float: left;
+    /*Ocupa la mitad del ancho*/
     width: 50%;
-    text-align:left;
+    /*Texto alineado a la izquierda*/
+    text-align: left;
 }
 
 .main .ubicacion .horarios {
+    /*Coloca esta parte a la derecha*/
     float: right;
+    /*Ocupa la mitad del ancho*/
     width: 50%;
+    /*Texto alineado a la derecha*/
     text-align: right;
+    /*Oculta contenido extra*/
     overflow: hidden;
 }
 
 .main .ubicacion .direccion .calle {
+    /*Espacio inferior entre líneas de dirección*/
     margin-bottom: 15px;
 }
 
 .main .ubicacion .horarios h4 {
+    /*Título centrado dentro del bloque de horarios*/
     text-align: center;
+    /*Espacio debajo del título*/
     margin-bottom: 20px;
 }
 
 .main .ubicacion .horarios .entre-semana,
 .main .ubicacion .horarios .fin-semana {
+    /*Cada bloque de horario ocupa la mitad del ancho*/
     width: 50%;
+    /*Alinea los dos bloques de horarios uno al lado del otro*/
     float: left;
+    /*Texto centrado*/
     text-align: center;
 }
 
 .main .mapa {
+    /*Mapa ocupa todo el ancho*/
     width: 100%;
+    /*Oculta contenido que sobresalga*/
     overflow: hidden;
 }
 
 .main .mapa iframe {
+    /*Iframe ocupa todo el ancho*/
     width: 100%;
+    /*Altura máxima del mapa: 600px*/
     max-height: 600px;
 }
 
 /*----- ----- FOOTER ----- ----- */
 footer {
+    /*Fondo negro para el pie de página*/
     background: #000;
 }
 
 footer .copyright {
+    /*Texto centrado*/
     text-align: center;
+    /*Espaciado vertical*/
     padding: 15px 0;
+    /*Color blanco para el texto*/
     color: #fff;
 }
 
+/*-----------MEDIA QUERIES-----------*/
 
+/* Estilos para pantallas con un ancho máximo de 800px (celulares y tablets grandes) */
+@media screen and (max-width: 800px) {
+
+    /* Contenedor del header */
+    header .contenedor {
+        /* Quita posicionamientos especiales y deja que fluya en el documento */
+        position: static;
+        /* Ajusta la altura automáticamente según su contenido */
+        height: auto;
+    }
+
+    /* Texto principal del header */
+    header .texto {
+        /* También se posiciona de forma natural (flujo normal del documento) */
+        position: static;
+        /* Añade espacio arriba y abajo del texto */
+        margin: 100px 0;
+    }
+
+    /* Menú de navegación */
+    header .menu {
+        /* Centra horizontalmente los enlaces del menú */
+        text-align: center;
+    }
+
+    /* Estilos individuales de cada enlace del menú */
+    header .menu a {
+        /* Añade espacio entre enlaces para que no estén tan juntos */
+        margin: 10px 20px;
+    }
+
+    /* Título principal del sitio (nombre) */
+    header .texto .nombre {
+        /* Reduce el tamaño de fuente para adaptarse a pantallas pequeñas */
+        font-size: 30px;
+    }
+
+    /* Subtítulo (eslogan o frase) */
+    header .texto h3 {
+        /* También reduce el tamaño del subtítulo */
+        font-size: 18px;
+    }
+
+    /* Imagen en la sección "Acerca de" */
+    .main .acerca-de .foto {
+        /* La imagen ocupará todo el ancho disponible */
+        width: 100%;
+        /* Se posiciona dentro del flujo normal, no superpuesta */
+        position: relative;
+    }
+
+    /* Texto en la sección "Acerca de" */
+    .main .acerca-de article {
+        /* Se ubica normalmente (ya no se superpone) */
+        position: relative;
+        /* Ocupa todo el ancho disponible */
+        width: 100%;
+        /* Lo sube un poco para ajustar visualmente */
+        top: -50px;
+        /* Elimina cualquier desplazamiento que se haya hecho antes */
+        transform: translate(0px, 0);
+    }
+
+    /* Sección del menú */
+    .main .menu {
+        /* Reduce el espacio superior para adaptarlo a pantallas más pequeñas */
+        padding-top: 300px;
+    }
+
+    /* Cada categoría del menú (entradas, bebidas, etc.) */
+    .main .menu article {
+        /* Cada una ocupará todo el ancho, en lugar de dividirlo en columnas */
+        width: 100%;
+    }
+
+    /* Galería de imágenes */
+    .main .galeria .foto {
+        /* Cada imagen ahora ocupará la mitad del ancho (dos por fila) */
+        width: 50%;
+    }
+
+    /* Mapa de ubicación */
+    .main .mapa {
+        /* Ocupa el 80% del ancho */
+        width: 80%;
+        /* Centra el mapa horizontalmente */
+        margin: auto;
+    }
+}
+
+/* Estilos para pantallas aún más pequeñas (máximo 400px de ancho) */
+@media screen and (max-width: 400px) {
+
+    /* Título de la sección "Acerca de" */
+    .main .acerca-de article h3 {
+        /* Reduce el tamaño del título */
+        font-size: 34px;
+        /* Reduce el espacio inferior del título */
+        margin-bottom: 10px;
+    }
+
+    /* Nombre y precio de cada platillo del menú */
+    .main .menu article .nombre,
+    .main .menu article .precio {
+        /* Tamaño más pequeño para que se ajusten mejor */
+        font-size: 16px;
+        /* Ajusta la altura de línea para que no ocupe mucho espacio vertical */
+        line-height: 16px;
+    }
+
+    /* Imágenes de la galería */
+    .main .galeria .foto {
+        /* Ahora cada imagen ocupa toda la fila (una por fila) */
+        width: 100%;
+    }
+
+    /* Dirección en la sección de ubicación */
+    .main .ubicacion .direccion {
+        /* Añade espacio debajo de la dirección para separarla de los horarios */
+        margin-bottom: 15px;
+    }
+
+    /* Dirección y horarios en la sección de ubicación */
+    .main .ubicacion .direccion,
+    .main .ubicacion .horarios {
+        /* Ambos ocupan todo el ancho (se muestran uno debajo del otro) */
+        width: 100%;
+        /* Elimina el flotado para que no se coloquen uno al lado del otro */
+        float: none;
+        /* Centra el texto */
+        text-align: center;
+    }
+}
 
